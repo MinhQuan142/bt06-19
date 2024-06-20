@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Nhân Viên</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <form id="employeesForm">
+        <h1>Danh sách nhân viên</h1>
+        <div>
+          <label for="name"><b>Họ và tên</b></label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div>
+          <label for="age"><b>Tuổi</b></label>
+          <input type="number" id="age" name="age" required />
+        </div>
+        <div>
+          <label for="salary"><b>Lương</b></label>
+          <input type="number" id="salary" name="salary" required /><b>
+            Triệu VNĐ</b
+          >
+        </div>
+        <div>
+          <label for="position"><b>Chức vụ</b></label>
+          <input type="text" id="position" name="position" required />
+        </div>
+        <div>
+          <label for="email"><b>Email</b></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <button type="submit">Thêm nhân viên</button>
+      </form>
+    </div>
+    <div>
+      <label for="search"><b>Tìm kiếm nhân viên</b></label>
+      <input type="text" id="search" name="search" oninput="searchEmployee()" />
+    </div>
+    <div>
+      <table id="employeesTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable('name')">Họ và tên</th>
+            <th onclick="sortTable('age')">Tuổi</th>
+            <th onclick="sortTable('salary')">Lương</th>
+            <th onclick="sortTable('position')">Chức vụ</th>
+            <th onclick="sortTable('email')">Email</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
